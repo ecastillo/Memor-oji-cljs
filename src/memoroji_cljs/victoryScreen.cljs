@@ -1,9 +1,9 @@
 (ns memoroji-cljs.victoryScreen
   (:require [reagent.core :as reagent :refer [atom]]))
 
-(defn render [isDone]
+(defn render [isGameOver]
   [:div {:id "victory-screen"
-         :class (when (true? isDone) "active")}
+         :class (when (true? isGameOver) "active")}
    [:div {:class "victory-emoji"}
     (js/String.fromCodePoint "0x1F601")]
    [:div {:class "victory-message"} "Good job!"]
