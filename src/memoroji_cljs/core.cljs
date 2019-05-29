@@ -30,12 +30,12 @@
        (createCard (random-uuid) i (nth emojiEntities i))]))))
 
 ; State
-(defonce app-state (atom {:numOfPairs 2
+(defonce app-state (atom {:numOfPairs 12
                           :score 0
                           :turns 0
                           :isGameOver false
                           :isInteractionAllowed true
-                          :cardsData (createCards 2)}))
+                          :cardsData (createCards 12)}))
 
 ; Are two cards a match?
 (defn isMatch [card1 card2]
